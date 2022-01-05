@@ -53,7 +53,6 @@ const bourbon = {
 const caturra = {
     keyword: "caturra",
     name: "Spanish Caturra",
-    image: "/images/coffee_bag_caturra.png",
     price: 9.99,
     description: "Exclusive sweet, complex and crisp coffee beans from the Caturra plants in the plains of Spain and are perfect to be used in sweet desserts and drinks.",
     location: "Bilbao, Spain",
@@ -89,7 +88,7 @@ shopItems.addEventListener("click", (e) => {
         shopDescription.textContent = currentItem.description;
         shopCity.textContent = currentItem.location;
         shopPrice.textContent = `$${currentItem.price}`;
-        shopImg.src = `/images/coffee_bag_${currentItem.keyword}.png`;
+        shopImg.src = `images/coffee_bag_${currentItem.keyword}.png`;
     }
 });
 
