@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/css/style.css" />
+        <title>BREW&nbsp;&nbsp;|&nbsp;&nbsp;Premium Coffee</title>
+    </head>
+    <body>
+        <header class="bg-light">
+            <nav class="nav flex">
+                <div class="logo flex">
+                    <a class="nav__item" href="index.html"><img src="images/logo.svg" alt="logo" /></a>
+                    <a class="nav__item logo__name" href="index.html"><p>BREW.</p></a>
+                </div>
+                <ul class="nav__list flex">
+                    <li><a class="nav__item" href="index.html">home</a></li>
+                    <li><a class="nav__item nav__item--active" href="shop.html">shop</a></li>
+                    <li><a class="nav__item" href="contact.html">contact</a></li>
+                    <li class="nav__cart"><img src="images/shopping_cart.svg" alt="shopping cart icon" /></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="shop centered-section container bg-light">
+                <div class="shop__content flex">
+                    <div class="shop__info flow-content">
+                        <h1 class="shop__title">Ethiopian Arabica</h1>
+                        <p class="shop__description">High quality arabica beans picked by hand and grown in subtropical climates having a strong roasted flavour with hints of chocolate, nuts and caramel.</p>
+                        <ul>
+                            <li class="list-marker shop__detail"><span class="shop__detail--span">500 gms</span></li>
+                            <li class="list-marker shop__detail">Packaged in <span class="shop__city shop__detail--span">Adis Ababa, Ethiopia</span></li>
+                        </ul>
+                    </div>
+                    <div class="shop__cta flow-content">
+                        <div class="shop__options flex">
+                            <input class="shop__checkbox" type="checkbox" name="roasted" id="roasted_check" />
+                            <label class="shop__label" for="roasted_check">Double Roasted (additional $1 charge applicable)</label>
+                        </div>
+                        <div class="shop__price flex">
+                            <button class="shop__cart btn bg-dark">Add to Cart</button>
+                            <h2 class="shop__amount">$14.99</h2>
+                        </div>
+                    </div>
+                </div>
+                <img src="/images/coffee_bag_arabica.png" alt="a bag of coffee beans" class="shop__img" />
+                <ul class="shop__list flow-content">
+                    <li class="shop__item shop__item--active">arabica</li>
+                    <li class="shop__item">catimor</li>
+                    <li class="shop__item">robusta</li>
+                    <li class="shop__item">bourbon</li>
+                    <li class="shop__item">caturra</li>
+                </ul>
+            </section>
+        </main>
+        <footer class="bg-dark">
+            <div class="footer container flex">
+                <div class="footer__identity flex">
+                    <div class="logo flex">
+                        <a href="index.html"><img src="/images/logo.svg" alt="logo" /></a>
+                        <a href="index.html" class="logo__name"><p>BREW.</p></a>
+                    </div>
+                    <h3 class="footer__copyright footer__heading">© Copyright 2022 Brew Privated Limited.</h3>
+                </div>
+                <div class="footer__links flex">
+                    <div class="flow-content">
+                        <h3 class="footer__heading">Links</h3>
+                        <ul class="flow-content">
+                            <li><a href="index.html" class="footer__link">home</a></li>
+                            <li><a href="shop.html" class="footer__link">shop</a></li>
+                            <li><a href="contact.html" class="footer__link">contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="flow-content">
+                        <h3 class="footer__heading">Follow Us</h3>
+                        <ul class="flow-content">
+                            <li><a href="https://www.instagram.com" target="_blank" class="footer__link">instagram</a></li>
+                            <li><a href="https://www.twitter.com" target="_blank" class="footer__link">twitter</a></li>
+                            <li><a href="https://www.facebook.com" target="_blank" class="footer__link">facebook</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="/scripts/script.js"></script>
+        <script src="/scripts/shop.js"></script>
+    </body>
+</html>

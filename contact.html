@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/css/style.css" />
+        <title>BREW&nbsp;&nbsp;|&nbsp;&nbsp;Premium Coffee</title>
+    </head>
+    <body>
+        <header class="bg-light">
+            <nav class="nav flex">
+                <div class="logo flex">
+                    <a class="nav__item" href="index.html"><img src="images/logo.svg" alt="logo" /></a>
+                    <a class="nav__item logo__name" href="index.html"><p>BREW.</p></a>
+                </div>
+                <ul class="nav__list flex">
+                    <li><a class="nav__item" href="index.html">home</a></li>
+                    <li><a class="nav__item" href="shop.html">shop</a></li>
+                    <li><a class="nav__item nav__item--active" href="contact.html">contact</a></li>
+                    <li class="nav__cart"><img src="images/shopping_cart.svg" alt="shopping cart icon" /></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="contact centered-section bg-dark">
+                <div class="container">
+                    <div class="contact__content flex">
+                        <div class="contact__info flex bg-dark">
+                            <div class="flow-content">
+                                <h1 class="contact__heading">Contact Us</h1>
+                                <p>We’d love to hear from you. Fill the form and our team will reach out to you!</p>
+                                <div class="contact__socials flex">
+                                    <a href="https://www.instagram.com" class="contact__icon" target="_blank"><img src="images/icon_instagram.svg" alt="instagram icon" /></a>
+                                    <a href="https://www.twitter.com" class="contact__icon" target="_blank"><img src="images/icon_twitter.svg" alt="twitter icon" /></a>
+                                    <a href="https://www.facebook.com" class="contact__icon" target="_blank"><img src="images/icon_facebook.svg" alt="facebook icon" /></a>
+                                </div>
+                            </div>
+                            <img src="images/coffee_shop.png" alt="large coffee shop" />
+                        </div>
+                        <form class="contact__form bg-light flow-content">
+                            <div>
+                                <label class="contact__label" for="name">Name</label>
+                                <input data-ptext="your name" class="contact__name contact__input" type="text" id="name" name="name" placeholder="your name" required />
+                            </div>
+                            <div>
+                                <label class="contact__label" for="email">Mail</label>
+                                <input data-ptext="yourmail@gmail.com" class="contact__email contact__input" type="email" id="email" name="email" placeholder="yourmail@gmail.com" required />
+                            </div>
+                            <textarea data-ptext="message" class="contact__input contact__message" name="message" placeholder="message"></textarea>
+                            <div class="contact__submit flex">
+                                <a class="btn bg-dark">Submit</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="bg-light">
+            <div class="footer container flex">
+                <div class="footer__identity flex">
+                    <div class="logo flex">
+                        <a href="index.html"><img src="/images/logo.svg" alt="logo" /></a>
+                        <a href="index.html" class="logo__name"><p>BREW.</p></a>
+                    </div>
+                    <h3 class="footer__copyright footer__heading">© Copyright 2022 Brew Privated Limited.</h3>
+                </div>
+                <div class="footer__links flex">
+                    <div class="flow-content">
+                        <h3 class="footer__heading">Links</h3>
+                        <ul class="flow-content">
+                            <li><a href="index.html" class="footer__link">home</a></li>
+                            <li><a href="shop.html" class="footer__link">shop</a></li>
+                            <li><a href="contact.html" class="footer__link">contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="flow-content">
+                        <h3 class="footer__heading">Follow Us</h3>
+                        <ul class="flow-content">
+                            <li><a href="https://www.instagram.com" target="_blank" class="footer__link">instagram</a></li>
+                            <li><a href="https://www.twitter.com" target="_blank" class="footer__link">twitter</a></li>
+                            <li><a href="https://www.facebook.com" target="_blank" class="footer__link">facebook</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="/scripts/script.js"></script>
+        <script src="/scripts/contact.js"></script>
+    </body>
+</html>

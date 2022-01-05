@@ -1,0 +1,578 @@
+@import url("https://fonts.googleapis.com/css2?family=Coming+Soon&family=Oswald:wght@300;400;500&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;1,300&display=swap");
+
+/*/////////////////////////////
+/////        RESET        /////
+/////////////////////////////*/
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+p,
+input,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+ul,
+ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/*/////////////////////////////
+////   CUSTOM PROPERTIES   ////
+/////////////////////////////*/
+
+:root {
+    --ff-heading: "Oswald", sans-serif;
+    --ff-body: "Source Sans Pro", sans-serif;
+    --ff-accent: "Coming Soon", cursive;
+
+    --clr-light: rgb(255, 255, 255);
+    --clr-dark: rgb(86, 60, 46);
+}
+
+/*/////////////////////////////
+////    UTILITY CLASSES    ////
+/////////////////////////////*/
+
+.flex {
+    display: flex;
+}
+
+.flow-content > * + * {
+    margin-top: var(--flow-space, 1.25rem);
+}
+
+.bg-dark {
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+}
+
+.bg-light {
+    background-color: var(--clr-light);
+    color: var(--clr-dark);
+}
+
+/*/////////////////////////////
+////     GENERAL STYLES    ////
+/////////////////////////////*/
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--ff-body);
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+section {
+    padding: 4.6875rem 0;
+}
+
+.centered-section {
+    height: 88vh;
+    display: grid;
+    place-items: center;
+}
+
+.container {
+    max-width: 71.75rem;
+    margin-inline: auto;
+    width: 90%;
+}
+
+.btn {
+    display: inline-block;
+    font-family: var(--ff-heading);
+    font-weight: 400;
+    font-size: 1.75rem;
+    padding: 0.7rem 4.25rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 0.3125rem;
+    border: none;
+    position: relative;
+}
+
+.btn::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 0.3125rem;
+    background-color: transparent;
+    transition: transform 200ms ease-in-out;
+}
+
+.btn.bg-dark:hover::after,
+.btn.bg-dark:focus-visible::after {
+    border: 4px solid var(--clr-dark);
+    transform: translate(8px, 8px);
+}
+
+.btn.bg-light:hover::after,
+.btn.bg-light:focus-visible::after {
+    border: 4px solid var(--clr-light);
+    transform: translate(8px, 8px);
+}
+
+h1,
+h2 {
+    font-family: var(--ff-heading);
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 0.875;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+.logo {
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo__name {
+    font-family: var(--ff-heading);
+    font-size: 1.75rem;
+    text-decoration: none;
+    color: inherit;
+}
+
+.list-marker {
+    position: relative;
+}
+
+.list-marker::before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 20px;
+    height: 28px;
+    transform: translateY(-50%);
+    background-image: url(/images/marker.svg);
+    background-size: cover;
+}
+
+.landing__content {
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.landing__img {
+    width: 24rem;
+    height: 28rem;
+}
+
+/*/////////////////////////////
+/////     NAVIGATION      /////
+/////////////////////////////*/
+
+.nav {
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 1.5rem;
+    height: 12vh;
+}
+
+.nav__list {
+    align-items: center;
+    gap: 3.875rem;
+}
+
+.nav__item {
+    color: inherit;
+    text-decoration: none;
+}
+
+.nav__item--active {
+    font-weight: 700;
+    padding-bottom: 0.25rem;
+    border-bottom: 0.3125rem solid var(--clr-dark);
+}
+
+.nav__cart {
+    position: relative;
+}
+
+.nav__cart::after {
+    opacity: 0;
+    content: "There are no items in your cart!";
+    position: absolute;
+    background-color: var(--clr-light);
+    border: 2px solid var(--clr-dark);
+    border-radius: 0.625rem 0 0.625rem 0.625rem;
+    top: 60px;
+    left: -175px;
+    width: 12.5rem;
+    z-index: 1;
+    padding: 1rem;
+    text-align: center;
+}
+
+.nav__cart--open::after {
+    opacity: 1;
+}
+
+/*/////////////////////////////
+/////       FOOTER        /////
+/////////////////////////////*/
+
+.footer {
+    justify-content: space-between;
+    padding: 4rem 0;
+}
+
+.footer__identity {
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer__heading {
+    font-family: var(--ff-heading);
+    font-size: 1.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.footer__links {
+    gap: 4rem;
+}
+
+.footer__link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.footer__link:hover,
+.footer__link:focus-visible {
+    text-decoration: underline;
+}
+
+.footer__copyright {
+    text-transform: capitalize;
+}
+
+/*/////////////////////////////
+/////        HOME         /////
+/////////////////////////////*/
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: max-content;
+}
+
+.hero {
+    background-image: url(/images/main_banner.png);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center right;
+    min-height: 88vh;
+    position: relative;
+    align-items: center;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.hero__content {
+    max-width: 43ch;
+    z-index: 1;
+    position: relative;
+}
+
+.hero__title {
+    font-size: 5.5rem;
+    line-height: 1;
+}
+
+.hero__title--span {
+    font-family: var(--ff-accent);
+    font-size: 4.75rem;
+    text-transform: capitalize;
+    text-decoration: underline;
+    text-decoration-thickness: 0.375rem;
+}
+
+.hero__btn {
+    margin-top: 5rem;
+}
+
+.about__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 4.6875rem;
+    place-items: center;
+}
+
+.about__story {
+    text-align: center;
+    grid-column: 1 / -1;
+}
+
+.story__heading {
+    margin-inline: auto;
+}
+
+.about__qualities {
+    --flow-space: 1.75rem;
+}
+
+.qualities__item {
+    padding-left: 2rem;
+    font-size: 2rem;
+}
+
+.qualities__item--span {
+    font-weight: 700;
+}
+
+.banner {
+    background-image: url(/images/beans_banner.png);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.6);
+    height: 32rem;
+}
+
+.locations__content {
+    align-items: center;
+    gap: 5.375rem;
+}
+
+.locations__heading {
+    gap: 0;
+}
+
+.locations__city {
+    margin-top: 0.5rem;
+    padding-left: 2rem;
+    font-size: 2.5rem;
+}
+
+.scroll__top {
+    opacity: 0;
+    position: fixed;
+    bottom: 2.5rem;
+    right: 2.5rem;
+    width: 50px;
+    height: 50px;
+    background-image: url("/images/icon_scroll.png");
+    background-size: cover;
+    transition: opacity 200ms ease-in;
+}
+
+.scroll__show {
+    opacity: 1;
+}
+
+/*/////////////////////////////
+/////        SHOP         /////
+/////////////////////////////*/
+
+.shop {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.shop__content {
+    flex-direction: column;
+    gap: 4.75rem;
+    grid-column: 1 / span 3;
+    max-width: 46ch;
+}
+
+.shop__info,
+.shop__cta {
+    --flow-space: 2.5rem;
+}
+
+.shop__title {
+    font-size: 4rem;
+}
+
+.shop__detail {
+    padding-left: 2rem;
+    margin-top: 0.5rem;
+}
+
+.shop__detail--span {
+    font-weight: 600;
+}
+
+.shop__options {
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.shop__checkbox {
+    position: relative;
+    appearance: none;
+    width: 1.5625rem;
+    height: 1.5625rem;
+    border-radius: 0.3125rem;
+    border: 0.0625rem solid rgba(0, 0, 0, 0.2);
+}
+
+.shop__checkbox::after {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: "\2713";
+    font-size: 1.15rem;
+    color: var(--clr-light);
+}
+
+.shop__checkbox:checked {
+    background-color: var(--clr-dark);
+}
+
+.shop__checkbox:checked::after {
+    display: block;
+}
+
+.shop__label {
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: 200;
+    color: rgba(0, 0, 0, 0.75);
+}
+
+.shop__price {
+    align-items: center;
+    gap: 1rem;
+}
+
+.shop__img {
+    grid-column: 4 / 6;
+}
+
+.shop__list {
+    text-align: right;
+    --flow-space: 2rem;
+}
+
+.shop__item {
+    padding-right: 0.75rem;
+    cursor: pointer;
+}
+
+.shop__item--active {
+    font-weight: 700;
+    border-right: 0.3125rem solid var(--clr-dark);
+}
+
+/*/////////////////////////////
+/////      CONTACT        /////
+/////////////////////////////*/
+
+.contact__content {
+    gap: 10rem;
+}
+
+.contact__info {
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.25rem;
+}
+
+.contact__heading {
+    font-size: 5rem;
+}
+
+.contact__socials {
+    gap: 1.25rem;
+}
+
+.contact__icon {
+    transition: transform 150ms ease-in;
+}
+
+.contact__icon:hover,
+.contact__icon:focus-visible {
+    filter: sepia(100%);
+    transform: scale(1.1);
+}
+
+.contact__form {
+    padding: 3.375rem;
+    border-radius: 1.5625rem;
+    --flow-space: 2rem;
+}
+
+.contact__label {
+    display: inline-block;
+    font-family: var(--ff-heading);
+    font-weight: 200;
+    margin-bottom: 0.5rem;
+    line-height: 0.8;
+}
+
+.contact__input {
+    display: block;
+    position: relative;
+    padding: 0.75rem;
+    border-radius: 0.3125rem;
+    resize: none;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 200;
+    border: 1px solid rgb(205, 186, 186);
+    width: 25rem;
+}
+
+.contact__input::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.contact__input--error {
+    border: 3px solid rgb(255, 0, 0);
+}
+
+.contact__input--error::placeholder {
+    color: rgb(255, 0, 0);
+}
+
+.contact__message {
+    min-height: 8rem;
+}
+
+.contact__submit {
+    justify-content: right;
+}
