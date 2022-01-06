@@ -31,12 +31,12 @@ btnSubmit.addEventListener("click", function (e) {
         contactName.placeholder = "Please enter your name!";
     }
 
-    if (!contactEmail.validity.valid && contactName.validity.valid) {
+    if (!contactEmail.validity.valid) {
         contactEmail.classList.add("contact__input--error");
         contactEmail.placeholder = "Please enter your correct Email!";
     }
 
-    if (contactMsg.value.length === 0 && contactName.validity.valid && contactEmail.validity.valid) {
+    if (contactMsg.value.length === 0) {
         contactMsg.classList.add("contact__input--error");
         contactMsg.placeholder = "Please enter a message!";
     }
