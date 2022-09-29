@@ -1,89 +1,148 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+<html lang="en">
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/9.10.0/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/9.10.0/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/9.10.0/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/9.10.0/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/9.10.0/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/9.10.0/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/9.10.0/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/9.10.0/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/9.10.0/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/9.10.0/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>BREW&nbsp;&nbsp;|&nbsp;&nbsp;Premium Coffee</title>
+</head>
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
-    </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+<body>
+    <header class="bg-light">
+        <nav class="nav flex">
+            <div class="logo flex">
+                <a class="nav__item" href="index.html"><img src="images/logo.svg" alt="logo" /></a>
+                <a class="nav__item logo__name" href="index.html">
+                    <p>BREW.</p>
+                </a>
+            </div>
+            <ul class="nav__list flex">
+                <li><a class="nav__item nav__item--active" href="index.html">home</a></li>
+                <li><a class="nav__item" href="shop.html">shop</a></li>
+                <li><a class="nav__item" href="contact.html">contact</a></li>
+                <li class="nav__cart"><img src="images/shopping_cart.svg" alt="shopping cart icon" /></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero flex bg-dark">
+            <div class="container">
+                <div class="hero__content flow-content">
+                    <h1 class="hero__title">Life Happens. <span class="hero__title--span">Coffee</span> Helps.</h1>
+                    <p>Boost your productivity and build your mood with a fresh cup of coffee.</p>
+                    <a href="#about" class="hero__btn btn bg-light">Learn More</a>
+                </div>
+            </div>
+        </section>
+        <section id="about" class="about bg-light">
+            <div class="about__content container">
+                <div class="about__story flow-content">
+                    <div class="story__heading section-heading">
+                        <h2>Our Story</h2>
+                        <img src="images/icon_coffeebeans.svg" alt="coffee beans icon" />
+                    </div>
+                    <p>
+                        The caffeinated legacy of Brew commenced when the company's founder and visionary, Mr.
+                        Sachkeerat Singh started harvesting fresh arabica beans from his farm back in Delhi, India. In
+                        the last 40 years, we have
+                        expanded both our reach and production capacity to cater to coffee lovers all across the world.
+                        For us, coffee means more than a morning energy boos, We view coffee as a ritual to be enjoyed
+                        with friends and
+                        family, it's time shared which will be cherished in years to come.
+                    </p>
+                </div>
+                <img src="images/main_coffeebeans.svg" alt="large animated image of coffee beans" />
+                <div class="about__qualities flow-content">
+                    <div class="section-heading">
+                        <h2>Why Us?</h2>
+                        <img src="images/icon_coffeelatte.svg" alt="latte coffee icon" />
+                    </div>
+                    <p>
+                        At Brew we pride ourselves on our delicious taste and range of popular blends. All our coffee is
+                        roasted in small batches to optimise flavour and ensure perfection in each roast. All our coffee
+                        is roasted in
+                        small batches to optimise flavour and ensure perfection in each roast. We aim to ship out all of
+                        our coffee beans as soon as they have been roasted to ensure the freshest tasting coffee.
+                    </p>
+                    <ul>
+                        <li class="list-marker qualities__item"><span class="qualities__item--span">100%</span> Organic
+                            Beans</li>
+                        <li class="list-marker qualities__item"><span class="qualities__item--span">100%</span> Cocoa
+                            Nibs</li>
+                        <li class="list-marker qualities__item"><span class="qualities__item--span">100%</span>
+                            Recyclable Packaging</li>
+                    </ul>
+                    <a href="shop.html" class="btn bg-dark">Order</a>
+                </div>
+            </div>
+        </section>
+        <section class="banner"></section>
+        <section class="locations bg-light">
+            <div class="locations__content container flex flow-content">
+                <div class="flow-content">
+                    <div class="locations__heading section-heading">
+                        <h2>Locations</h2>
+                        <img src="images/icon_coffeecup.svg" alt="coffee cup icon" />
+                    </div>
+                    <ul>
+                        <li class="list-marker locations__city">Delhi</li>
+                        <li class="list-marker locations__city">New York</li>
+                        <li class="list-marker locations__city">London</li>
+                        <li class="list-marker locations__city">Sao Paulo</li>
+                        <li class="list-marker locations__city">Sydney</li>
+                        <li class="list-marker locations__city">Cape Town</li>
+                    </ul>
+                </div>
+                <img src="images/map.svg" alt="world map made of coffee beans" />
+            </div>
+        </section>
+    </main>
+    <footer class="bg-dark">
+        <div class="footer container flex">
+            <div class="footer__identity flex">
+                <div class="logo flex">
+                    <a href="index.html"><img src="images/logo.svg" alt="logo" /></a>
+                    <a href="index.html" class="logo__name">
+                        <p>BREW.</p>
+                    </a>
+                </div>
+                <h3 class="footer__copyright footer__heading">© Copyright 2022 Brew Privated Limited.</h3>
+            </div>
+            <div class="footer__links flex">
+                <div class="flow-content">
+                    <h3 class="footer__heading">Links</h3>
+                    <ul class="flow-content">
+                        <li><a href="index.html" class="footer__link">home</a></li>
+                        <li><a href="shop.html" class="footer__link">shop</a></li>
+                        <li><a href="contact.html" class="footer__link">contact</a></li>
+                    </ul>
+                </div>
+                <div class="flow-content">
+                    <h3 class="footer__heading">Follow Us</h3>
+                    <ul class="flow-content">
+                        <li><a href="https://www.instagram.com" target="_blank" class="footer__link">instagram</a></li>
+                        <li><a href="https://www.twitter.com" target="_blank" class="footer__link">twitter</a></li>
+                        <li><a href="https://www.facebook.com" target="_blank" class="footer__link">facebook</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="scroll__top"></div>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/index.js"></script>
+    <script type="module">
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js'
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+        // If you enabled Analytics in your project, add the Firebase SDK for Google Analytics
+        import { getAnalytics } from 'https://www.gstatic.com/firebasejs/9.10.0/firebase-analytics.js'
 
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
+        // Add Firebase products that you want to use
+        import { getAuth } from 'https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js'
+        import { getFirestore } from 'https://www.gstatic.com/firebasejs/9.10.0/firebase-firestore.js'
     </script>
-  </body>
+</body>
+
 </html>
